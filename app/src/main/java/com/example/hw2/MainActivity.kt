@@ -49,7 +49,6 @@ class MainActivity : ComponentActivity() {
                     startDestination = "gameScreen"
                 ) {
                     composable("gameScreen") {
-//                        GameScreen(navController = navController, initialValue = randomInitialValue)
                         GameScreen()
                     }
                 }
@@ -119,39 +118,6 @@ fun GameScreen() {
         )
     }
 }
-
-
-//@Composable
-//fun GameScreen(navController: NavController, initialValue: Float) {
-//    val targetValue = generateRandomTargetValue()
-//    var sliderValue by remember { mutableStateOf(initialValue) }
-//
-//    Column(
-//        modifier = Modifier.fillMaxSize()
-//    ) {
-//        Text(
-//            text = "Bull's Eye Game",
-//            color = Color.Black,
-//            fontSize = 24.sp,
-//            modifier = Modifier.padding(16.dp)
-//        )
-//        Slider(
-//            value = sliderValue,
-//            onValueChange = { sliderValue = it },
-//            valueRange = 0.0f..100.0f, // Set the value range of the slider
-//            steps = 100,
-//        )
-//        Text("Slider Value: ${sliderValue}")
-//
-//        Button(
-//            onClick = {  },
-//            modifier = Modifier.padding(16.dp)
-//        ) {
-//            Text(text = "Hit me!")
-//        }
-//    }
-//}
-
 
 fun generateRandomTargetValue(): Float {
     val random = Random.Default
